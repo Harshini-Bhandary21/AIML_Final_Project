@@ -1,0 +1,6 @@
+.env
+.venv/
+__pycache__/
+data/live_raw.csv
+data/live_meta.json
+data/donations.json

@@ -1,0 +1,8 @@
+flask>=3.0
+pandas>=2.2
+numpy>=1.26
+scikit-learn>=1.5
+scipy>=1.13
+mlxtend>=0.23
+requests>=2.32
+anthropic>=0.40   # optional: only for the Claude chatbot mode
