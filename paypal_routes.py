@@ -106,7 +106,8 @@ def impact_rank():
     q = request.args
     amount, n = float(q.get("amount", 1000)), int(q.get("n", 12))
     t = impact.impact_table()
-    t = t[t["pop"] >= 1e6].sort_values("py_per_usd", ascending=False).head(n)
+    t = t[t["pop"] >= 1e6].sort_values("py_per_usd", ascending=False)
+    t = t if n >= 500 else t.head(n)
     return J({"amount": amount, "rows": [{"country": r.country, "iso3": r.iso3, "income": r.income, "life": r.life, "pop": r["pop"], "cost": r.cost, "gain1": r.gain1,
                                           "person_years": r.py_per_usd * amount} for _, r in t.iterrows()]})
 

@@ -41,6 +41,25 @@ restart. Log in at checkout with a sandbox *personal* test account. The secret s
 when the order is created. Donations are kept in `data/donations.json` (Ledger tab). The "person-years of life" figure is an illustrative model estimate,
 not a causal promise.
 
+## For research use
+* **Methods page** (`/#methods`) documents sources, coverage per indicator, data preparation, the country-grouped split, 5-fold grouped cross-validation
+  against trivial baselines, hyper-parameters, limitations and ethics, and the exact software versions. Every number on it is computed from the loaded
+  data (`/api/methods`), including a SHA-256 fingerprint of the data file so a quoted result can be tied to the data that produced it.
+* **Cite page** (`/#cite`) gives APA and BibTeX citations, and every page ends with "How to cite this page". Edit `paper.json` (authors, affiliation,
+  year, version, repository, DOI) and the citations update everywhere.
+* **Figures** are numbered, show their source, and can be downloaded as high-resolution PNG, SVG or the plotted data as CSV.
+* **Licences** of every data source are listed on the Methods page as stated by the providers (World Bank CC BY 4.0; WHO data terms; Open-Meteo CC BY 4.0,
+  free tier non-commercial; disease.sh terms). Check them again before publishing.
+
+## Imagery and motion
+* **Photographs** on the Overview, Live Pulse and Fund Impact pages are openly licensed images from Wikimedia Commons, stored in `static/img/`
+  with full attributions in `static/img/CREDITS.md` (also shown on the Overview page under "Image credits" and beside each image).
+  The numbers printed next to the photos come from `/api/focus`, which uses real observed values only.
+* **Animation** is built in and works offline: a rotating globe coloured by life expectancy, a time-lapse that plays the world map and the
+  wealth-and-longevity chart from 1970 to 2024, count-up figures, a heartbeat line on Live Pulse, and a gentle scroll-reveal on the Overview.
+  Everything respects the operating-system "reduce motion" setting.
+* **Typography** uses standard system fonts (Georgia for headings, Arial for text) at a generous size.
+
 ## Notes
 * **Manual refresh** (Home -> Live API refresh) does the same download on demand; "Back to static" removes the live copy.
 * **Chatbot** works offline with the built-in parser; paste an Anthropic API key (or set `ANTHROPIC_API_KEY`) to use Claude.

@@ -4,46 +4,46 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>SDG-3 AIML Studio</title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🩺</text></svg>">
+<meta name="description" content="Machine learning and AI applied to World Bank and WHO health data - an interactive, reproducible research platform for Sustainable Development Goal 3.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23356ae6'/><path d='M7 17h5l3-7 4 12 3-5h3' fill='none' stroke='white' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Inter:wght@400;500;600&family=Manrope:wght@600;650;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/static/style.css">
 <script src="/static/vendor/plotly.min.js"></script>
+<script src="/static/vendor/three.min.js"></script>
 </head>
 <body>
-<div class="app">
-  <aside class="side">
-    <div class="brand"><div class="logo">🩺</div><div><b>SDG-3 AIML Studio</b><span>Good Health &amp; Well-being</span></div></div>
-    <div class="nav on" data-page="home"><span class="ic">🏠</span>Home</div>
-    <div class="nav-sec">Machine learning</div>
-    <div class="nav" data-page="reg"><span class="ic">📈</span>Regression Lab<small>U3</small></div>
-    <div class="nav" data-page="clf"><span class="ic">🎯</span>Classification Lab<small>U4</small></div>
-    <div class="nav" data-page="trees"><span class="ic">🌳</span>Trees &amp; Ensembles<small>U5</small></div>
-    <div class="nav" data-page="disc"><span class="ic">🔭</span>Discovery Lab<small>U6</small></div>
-    <div class="nav-sec">Artificial intelligence</div>
-    <div class="nav" data-page="search"><span class="ic">🧭</span>AI Search Playground<small>U2</small></div>
-    <div class="nav" data-page="expert"><span class="ic">🧠</span>Expert System &amp; Chatbot<small>U1</small></div>
-    <div class="nav-sec">Live APIs</div>
-    <div class="nav" data-page="live"><span class="ic">🌐</span>Live Pulse<small>LIVE</small></div>
-    <div class="nav" data-page="fund"><span class="ic">💳</span>Fund Impact<small>PAYPAL</small></div>
-    <div class="side-foot" id="foot">Loading data…</div>
-  </aside>
-  <main>
-    <section class="page on" id="page-home"></section>
-    <section class="page" id="page-reg"></section>
-    <section class="page" id="page-clf"></section>
-    <section class="page" id="page-trees"></section>
-    <section class="page" id="page-disc"></section>
-    <section class="page" id="page-search"></section>
-    <section class="page" id="page-expert"></section>
-    <section class="page" id="page-live"></section>
-    <section class="page" id="page-fund"></section>
-  </main>
-</div>
+<a class="skip" href="#main">Skip to content</a>
+<header class="topbar" id="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="#home" data-go="home"><span class="logo"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12h4l2-6 4 12 2-6h6"/></svg></span><span class="bt"><b>SDG-3 AIML Studio</b><span>Machine learning for global health</span></span></a>
+    <nav class="topnav" id="topnav" aria-label="Primary"></nav>
+    <div class="topstatus" id="topstatus">Loading data</div>
+    <button class="menu-btn" id="menu" aria-expanded="false" aria-controls="topnav">Menu</button>
+  </div>
+  <div class="syncbar"><i id="syncfill"></i></div>
+</header>
+<main id="main">
+  <section class="page on" id="page-home"></section>
+  <section class="page" id="page-reg"></section>
+  <section class="page" id="page-clf"></section>
+  <section class="page" id="page-trees"></section>
+  <section class="page" id="page-disc"></section>
+  <section class="page" id="page-search"></section>
+  <section class="page" id="page-expert"></section>
+  <section class="page" id="page-live"></section>
+  <section class="page" id="page-fund"></section>
+  <section class="page" id="page-methods"></section>
+  <section class="page" id="page-cite"></section>
+</main>
+<footer class="sitefoot" id="sitefoot"></footer>
 <script src="/static/lib.js"></script>
 <script src="/static/pages1.js"></script>
 <script src="/static/pages_algo.js"></script>
 <script src="/static/pages2.js"></script>
 <script src="/static/pages3.js"></script>
 <script src="/static/pages4.js"></script>
+<script src="/static/pages5.js"></script>
 <script src="/static/app.js"></script>
 </body>
 </html>

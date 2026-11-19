@@ -1,0 +1,17 @@
+{
+  "title": "SDG-3 AIML Studio: an interactive machine-learning platform for Good Health and Well-being",
+  "short_title": "SDG-3 AIML Studio",
+  "authors": [
+    { "given": "Harshini Ramdas", "family": "Bhandary" },
+    { "given": "Parth Nandkishor", "family": "Shingane" },
+    { "given": "Dhruv Prafull", "family": "Bompilwar" }
+  ],
+  "affiliation": "School of Computer Engineering",
+  "course": "Artificial Intelligence and Machine Learning (2304322T)",
+  "year": 2026,
+  "version": "1.0",
+  "repository": "https://github.com/Harshini-Bhandary21/AIML_Final_Project",
+  "url": "",
+  "doi": "",
+  "keywords": ["Sustainable Development Goal 3", "machine learning", "life expectancy", "country-level health data", "interactive visualisation"]
+}

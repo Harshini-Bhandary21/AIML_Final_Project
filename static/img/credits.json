@@ -1,0 +1,50 @@
+{
+ "delhi-smog": {
+  "file": "delhi-smog.jpg",
+  "title": "Thick Smog Blankets India’s Capital City (NESDIS 2019-11-01).jpg",
+  "author": "NOAA",
+  "license": "Public domain",
+  "license_url": "",
+  "source": "https://commons.wikimedia.org/wiki/File:Thick_Smog_Blankets_India%E2%80%99s_Capital_City_(NESDIS_2019-11-01).jpg"
+ },
+ "immunisation": {
+  "file": "immunisation.jpg",
+  "title": "District Public Health Office, Immunisation Clinic, Pokhara, Nepal. (10693299213).jpg",
+  "author": "Department of Foreign Affairs and Trade",
+  "license": "CC BY 4.0",
+  "license_url": "https://creativecommons.org/licenses/by/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:District_Public_Health_Office,_Immunisation_Clinic,_Pokhara,_Nepal._(10693299213).jpg"
+ },
+ "newborn-clinic": {
+  "file": "newborn-clinic.jpg",
+  "title": "A Syrian refugee and her newborn baby at a clinic in Ramtha, Jordan (9613483141).jpg",
+  "author": "DFID - UK Department for International Development",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:A_Syrian_refugee_and_her_newborn_baby_at_a_clinic_in_Ramtha,_Jordan_(9613483141).jpg"
+ },
+ "health-worker": {
+  "file": "health-worker.jpg",
+  "title": "Community health worker in the Brazilian public health system.jpg",
+  "author": "Paulo H. Carvalho/Agência Brasília",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Community_health_worker_in_the_Brazilian_public_health_system.jpg"
+ },
+ "water": {
+  "file": "water.jpg",
+  "title": "Maasai villagers fetching water.jpg",
+  "author": "Adriano199",
+  "license": "CC BY-SA 4.0",
+  "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Maasai_villagers_fetching_water.jpg"
+ },
+ "handwashing": {
+  "file": "handwashing.jpg",
+  "title": "Matutinal handwashing in school (Manolo Fortich) (3171503975).jpg",
+  "author": "SuSanA Secretariat",
+  "license": "CC BY 2.0",
+  "license_url": "https://creativecommons.org/licenses/by/2.0",
+  "source": "https://commons.wikimedia.org/wiki/File:Matutinal_handwashing_in_school_(Manolo_Fortich)_(3171503975).jpg"
+ }
+}

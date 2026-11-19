@@ -23,6 +23,7 @@ from impact import gain_model, scenario
 from live_routes import bp as live_bp
 from ml_routes import bp as ml_bp
 from paypal_routes import bp as paypal_bp
+from research_routes import bp as research_bp
 from util import J, df_now, fnum, inum, snum
 
 warnings.filterwarnings("ignore")
@@ -32,6 +33,7 @@ app = Flask(__name__, static_folder=str(STATIC), static_url_path="/static")
 app.register_blueprint(ml_bp)
 app.register_blueprint(live_bp)
 app.register_blueprint(paypal_bp)
+app.register_blueprint(research_bp)
 
 
 @app.get("/")
@@ -76,6 +78,22 @@ def group_api():
     ind = snum(q, "indicator", "life_expectancy")
     g = df.groupby(["income_group", "year"])[ind].mean().reset_index()
     return J({k: {"year": v.year, "value": v[ind]} for k, v in g.groupby("income_group")})
+
+
+@app.get("/api/focus")
+def focus_api():
+    """Low- vs high-income averages of four headline indicators, from REAL observations only (each country's latest observed value in the last
+    7 years) - used by the photo cards on the Overview page so every number shown beside a photo is a measured value, never an imputed one."""
+    df = df_now()
+    out = {}
+    for col in ["measles_immunization_pct", "infant_mortality_per_1000", "basic_sanitation_pct", "physicians_per_1000"]:
+        d = df[df["obs_" + col]].sort_values("year").groupby("country").tail(1)
+        d = d[d.year >= df.year.max() - 6]
+        g = d.groupby("income_group")[col].agg(["mean", "count"])
+        if "Low income" in g.index and "High income" in g.index:
+            out[col] = {"year": int(d.year.max()), "low": g.loc["Low income", "mean"], "high": g.loc["High income", "mean"],
+                        "n_low": int(g.loc["Low income", "count"]), "n_high": int(g.loc["High income", "count"])}
+    return J(out)
 
 
 # ======================================================================== live refresh (background job)
